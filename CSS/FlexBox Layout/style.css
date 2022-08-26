@@ -1,0 +1,60 @@
+.container {
+    border: 3px solid lightblue;
+    /*to use flexbox we use 
+     display :flex;
+    */
+    display: flex;
+    /*to control the flex direction*/
+    flex-direction: row;
+    /*nowrap defualt*/
+    flex-wrap: wrap;
+    /*flex can be row ,column ,row reverse, column reverse*/
+    /*To align Items Use
+
+       horizontal
+       ----------
+    1- Justify-contenet --> flex-end,flex-start,center,
+                            space-evenly,space-between,space-around
+        
+        Vertical
+        -------
+    2-  align-items -->   flex-end,flex-start,center,
+
+    3- align-content--> (when multiple lines)
+            
+            align-content: center;
+    */
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.box {
+    width: 5rem;
+    height: 5rem;
+    background: gold;
+    margin: 1rem;
+    /*
+        Sizing
+        ------
+        flex-basis (intial size of a flex item)
+        flex-grow(the growth factor)
+        flex-shrink(shrink factor)
+        flex combine the 3
+
+         flex-basis: 15rem;
+         flex-grow: 1; number not a unit
+         flex-shrink: 1; number not a unit
+    */
+    flex-basis: 15rem;
+}
+
+.box-one {
+    /* u can override the alignment here by the following*/
+    align-self: flex-start;
+    /*can override the flex sizing here too
+
+         flex-basis: 15rem;
+         flex-grow: 1; number not a unit
+         flex-shrink: 1; number not a unit
+    */
+}
