@@ -1,0 +1,60 @@
+.container {
+    height: 100vh;
+    /*to show as gird*/
+    display: grid;
+    /*to define number of rows and columns */
+    /*for 3x2 gird*/
+    grid-template-rows: 100px 100px 100px;
+    grid-template-columns: repeat(2, 100px);
+    /*
+    or use as shorthand
+
+    grid-template: repeat(3, 100px) / repeat(2, 100px);
+
+    grid-template: 100px auto 100px / 30fr 70fr;       --> the second row with be resizable based on the size of the screen
+    
+    */
+    grid-template: 100px auto 100px / 30fr 70fr;
+    border: 3px solid lightgrey;
+    /*To Align Items default is stretch
+
+    justify-items: center;
+    align-items: center;
+    
+    to align the grid itself 
+
+
+    justify-content: center;
+    align-content: center;
+    */
+    /*
+        to apply gaps between rows or columns
+        */
+    row-gap: 10px;
+    column-gap: 10px;
+    gap: 10px;
+    /*
+    grid-template-areas (to name areas)
+    */
+    grid-template-areas: "header header" "sidebar main" ".  footer";
+}
+
+.box {
+    background: gold;
+}
+
+.box-one {
+    /*to control the place of item in grid*/
+    grid-column: 1/span 2;
+    /*
+    grid-row: 2/4;
+    row/column
+    grid-area: 1 / 1 / 1 / 3;
+    grid-area:header;
+    */
+}
+
+.box-four {
+    /*to control the place of item in grid by name*/
+    grid-area: footer;
+}
