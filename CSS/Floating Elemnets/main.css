@@ -1,0 +1,42 @@
+.avatar {
+    width: 5rem;
+    height: 5rem;
+    background-color: blue;
+    /*to float the avatar we use 
+      float : (left ,right)
+    */
+    float: left;
+    margin-right: 0.5rem;
+}
+
+.tweet {
+    border: 0.5rem solid gray;
+    margin-bottom: 0.5rem;
+    /*
+         but note that
+            parent elemnt doesnot see float element as they collapse
+            so go and delete the second paragraph the border will collapse causing a problem
+
+        solution 
+            1- to define a div with class clear (not descriptive)
+            2- use sudo element
+            3-use overflow:auto not the best way
+    */
+}
+
+
+/*to push the second p down to the avtar we use clear property*/
+
+.clear {
+    /*clear property can be right or left or both*/
+    clear: left;
+}
+
+
+/*the second solution*/
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
